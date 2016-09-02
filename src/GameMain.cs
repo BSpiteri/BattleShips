@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+namespace BattleShips
+{
 static class GameLogic
 {
 	public static void Main()
@@ -27,4 +29,5 @@ static class GameLogic
 		//Free Resources and Close Audio, to end the program.
 		FreeResources();
 	}
+}
 }

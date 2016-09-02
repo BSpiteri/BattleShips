@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+namespace BattleShips
+{
 /// <summary>
 /// This includes a number of utility methods for
 /// drawing and interacting with the Mouse.
@@ -312,4 +314,5 @@ static class UtilityFunctions
 			DrawScreen();
 		}
 	}
+}
 }

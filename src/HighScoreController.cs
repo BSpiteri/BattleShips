@@ -6,6 +6,8 @@ using System.Data;
 using System.Diagnostics;
 using System.IO;
 using SwinGameSDK;
+namespace BattleShips
+{
 
 /// <summary>
 /// Controls displaying and collecting high score data.
@@ -202,4 +204,5 @@ static class HighScoreController
 			EndCurrentState();
 		}
 	}
+}
 }
