@@ -72,10 +72,6 @@
     <Compile Include="src\HighScoreController.cs" />
     <Compile Include="src\MenuController.cs" />
     <Compile Include="src\UtilityFunctions.cs" />
-    <Compile Include="src\Models\AIPlayer.cs" />
-    <Compile Include="src\Models\AlHardPlayer.cs" />
-    <Compile Include="src\Models\AlMediumPlayer.cs" />
-    <Compile Include="src\Models\AlOption.cs" />
     <Compile Include="src\Models\AttackResult.cs" />
     <Compile Include="src\Models\BattleShipsGame.cs" />
     <Compile Include="src\Models\Direction.cs" />
@@ -88,6 +84,10 @@
     <Compile Include="src\Models\ShipName.cs" />
     <Compile Include="src\Models\Tile.cs" />
     <Compile Include="src\Models\TileView.cs" />
+    <Compile Include="src\Models\AIHardPlayer.cs" />
+    <Compile Include="src\Models\AIMediumPlayer.cs" />
+    <Compile Include="src\Models\AIOption.cs" />
+    <Compile Include="src\Models\AIPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
