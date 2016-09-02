@@ -2,7 +2,7 @@ using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
+//using System.Data;
 using System.Diagnostics;
 namespace BattleShips
 {
@@ -21,7 +21,7 @@ public interface ISeaGrid
 	/// Indicates that the grid has changed.
 	/// </summary>
 
-	event EventHandler Changed;
+	 event EventHandler Changed;
 	/// <summary>
 	/// Provides access to the given row/column
 	/// </summary>

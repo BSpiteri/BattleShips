@@ -2,9 +2,10 @@ using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
+//using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
+using System.Drawing;
 namespace BattleShips
 {
 
@@ -68,9 +69,9 @@ public static class GameResources
 	/// <param name="font">Name of Font</param>
 	/// <returns>The Font Loaded with this Name</returns>
 
-	public static Font GameFont(string font)
+	public static System.Drawing.Font GameFont(string font)
 	{
-		return _Fonts(font);
+		//return _Fonts(font);
 	}
 
 	/// <summary>
@@ -79,7 +80,7 @@ public static class GameResources
 	/// <param name="image">Name of image</param>
 	/// <returns>The image loaded with this name</returns>
 
-	public static Bitmap GameImage(string image)
+		public static System.Drawing.Bitmap GameImage(string image)
 	{
 		return _Images(image);
 	}
@@ -106,16 +107,16 @@ public static class GameResources
 		return _Music(music);
 	}
 
-	private static Dictionary<string, Bitmap> _Images = new Dictionary<string, Bitmap>();
-	private static Dictionary<string, Font> _Fonts = new Dictionary<string, Font>();
+		private static Dictionary<string, System.Drawing.Bitmap> _Images = new Dictionary<string, System.Drawing.Bitmap>();
+		private static Dictionary<string, System.Drawing.Font> _Fonts = new Dictionary<string, System.Drawing.Font>();
 	private static Dictionary<string, SoundEffect> _Sounds = new Dictionary<string, SoundEffect>();
 
 	private static Dictionary<string, Music> _Music = new Dictionary<string, Music>();
-	private static Bitmap _Background;
-	private static Bitmap _Animation;
-	private static Bitmap _LoaderFull;
-	private static Bitmap _LoaderEmpty;
-	private static Font _LoadingFont;
+		private static System.Drawing.Bitmap _Background;
+		private static System.Drawing.Bitmap _Animation;
+		private static System.Drawing.Bitmap _LoaderFull;
+		private static System.Drawing.Bitmap _LoaderEmpty;
+		private static System.Drawing.Font _LoadingFont;
 
 	private static SoundEffect _StartSound;
 	/// <summary>
@@ -246,7 +247,7 @@ public static class GameResources
 		_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(filename, ResourceKind.BitmapResource)));
 	}
 
-	private static void NewTransparentColorImage(string imageName, string fileName, Color transColor)
+		private static void NewTransparentColorImage(string imageName, string fileName, System.Drawing.Color transColor)
 	{
 		_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(fileName, ResourceKind.BitmapResource), true, transColor));
 	}

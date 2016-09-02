@@ -3,7 +3,7 @@ using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
+//using System.Data;
 using System.Diagnostics;
 namespace BattleShips {
 /// <summary>
@@ -14,9 +14,8 @@ namespace BattleShips {
 /// grid. This can be used in conjuncture with the SeaGridAdapter to 
 /// mask the position of the ships.
 /// </remarks>
-public class SeaGrid : ISeaGrid
+	public class SeaGrid : ISeaGrid
 {
-
 	private const int _WIDTH = 10;
 
 	private const int _HEIGHT = 10;
@@ -27,7 +26,8 @@ public class SeaGrid : ISeaGrid
 	/// <summary>
 	/// The sea grid has changed and should be redrawn.
 	/// </summary>
-	public event EventHandler ISeaGrid.Changed;
+		public event EventHandler Changed;
+
 
 	/// <summary>
 	/// The width of the sea grid.
