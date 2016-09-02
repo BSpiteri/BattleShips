@@ -72,6 +72,7 @@ public static class GameResources
 	public static System.Drawing.Font GameFont(string font)
 	{
 		//return _Fonts(font);
+			return new Font(font);
 	}
 
 	/// <summary>
