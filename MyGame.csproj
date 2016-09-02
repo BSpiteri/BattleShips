@@ -59,9 +59,35 @@
   <ItemGroup>
     <Folder Include="src\" />
     <Folder Include="Resources\" />
+    <Folder Include="src\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\GameMain.cs" />
+    <Compile Include="src\DelpoymentController.cs" />
+    <Compile Include="src\DiscoveryController.cs" />
+    <Compile Include="src\EndingGameController.cs" />
+    <Compile Include="src\GameController.cs" />
+    <Compile Include="src\GameResources.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\HighScoreController.cs" />
+    <Compile Include="src\MenuController.cs" />
+    <Compile Include="src\UtilityFunctions.cs" />
+    <Compile Include="src\Models\AIPlayer.cs" />
+    <Compile Include="src\Models\AlHardPlayer.cs" />
+    <Compile Include="src\Models\AlMediumPlayer.cs" />
+    <Compile Include="src\Models\AlOption.cs" />
+    <Compile Include="src\Models\AttackResult.cs" />
+    <Compile Include="src\Models\BattleShipsGame.cs" />
+    <Compile Include="src\Models\Direction.cs" />
+    <Compile Include="src\Models\ISeaGrid.cs" />
+    <Compile Include="src\Models\Player.cs" />
+    <Compile Include="src\Models\ResultOfattack.cs" />
+    <Compile Include="src\Models\SeaGrid.cs" />
+    <Compile Include="src\Models\SeaGridAdapter.cs" />
+    <Compile Include="src\Models\Ship.cs" />
+    <Compile Include="src\Models\ShipName.cs" />
+    <Compile Include="src\Models\Tile.cs" />
+    <Compile Include="src\Models\TileView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">

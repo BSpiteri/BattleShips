@@ -1,11 +1,8 @@
 ﻿<Properties StartupItem="MyGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Desktop\QuickSnap\src\GameLogic\Snap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameMain.cs">
     <Files>
-      <File FileName="..\..\..\Desktop\QuickSnap\src\SnapGame.cs" Line="35" Column="24" />
-      <File FileName="..\..\..\Desktop\QuickSnap\src\GameLogic\Deck.cs" Line="68" Column="23" />
-      <File FileName="..\..\..\Desktop\QuickSnap\src\GameLogic\Snap.cs" Line="143" Column="42" />
-      <File FileName="..\..\..\Desktop\QuickSnap\src\GameLogic\Card.cs" Line="31" Column="13" />
+      <File FileName="src\GameMain.cs" Line="14" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
