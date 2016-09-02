@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using SwinGameSDK;
+namespace BattleShips
+{
 
 /// <summary>
 /// The DeploymentController controls the players actions
@@ -180,4 +182,5 @@ static class DeploymentController
 
 		return ShipName.None;
 	}
+}
 }

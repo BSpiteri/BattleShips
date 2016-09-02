@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
+namespace BattleShips
+{
 /// <summary>
 /// The GameStates represent the state of the Battleships game play.
 /// This is used to control the actions and view displayed to
@@ -51,4 +53,5 @@ public enum GameState
 	/// The player has quit. Show ending credits and terminate the game
 	/// </summary>
 	Quitting
+}
 }
