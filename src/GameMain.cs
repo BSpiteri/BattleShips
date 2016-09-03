@@ -18,6 +18,7 @@ namespace BattleShips
 			//Game Loop
 			do {
 				GameController.DrawScreen();
+				SwinGame.ProcessEvents();
 			} while (!(SwinGame.WindowCloseRequested() == true | CurrentState == GameState.Quitting));
 
 			SwinGame.StopMusic();
