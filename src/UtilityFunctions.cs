@@ -131,23 +131,26 @@ namespace BattleShips
 
 					draw = true;
 
-						switch (grid.HitTile(row, col)) {
-						case TileView.Ship:
-							draw = false;
-							break;
-						//If small Then fillColor = _SMALL_SHIP Else fillColor = _LARGE_SHIP
-						case TileView.Miss:
-							if (small)
-								fillColor = SMALL_MISS;
-							else
-								fillColor = LARGE_MISS;
-							break;
-						case TileView.Hit:
-							if (small)
-								fillColor = SMALL_HIT;
-							else
-								fillColor = LARGE_HIT;
-							break;
+					switch (grid.Item (row, col))
+					{
+					case TileView.Ship:
+						draw = false;
+						break;
+					//If small Then fillColor = _SMALL_SHIP Else fillColor = _LARGE_SHIP
+					case TileView.Miss:
+						if (small)
+							fillColor = SMALL_MISS;
+						else
+							fillColor = LARGE_MISS;
+						break;
+					case TileView.Hit:
+						if (small)
+							fillColor = SMALL_HIT;
+						else
+							fillColor = LARGE_HIT;
+						break;
+					}
+					switch (grid.Item(row, col)) {
 						case TileView.Sea:
 						case TileView.Ship:
 							if (small)
