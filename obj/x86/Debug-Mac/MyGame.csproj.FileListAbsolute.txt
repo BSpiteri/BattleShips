@@ -48,3 +48,5 @@ D:\Media\Wade\Documents\ProgrammingTasksOOP\ProjectTemplate - Copy\bin\Debug\MyG
 D:\Media\Wade\Documents\ProgrammingTasksOOP\ProjectTemplate - Copy\bin\Debug\SwinGame.dll
 D:\Media\Wade\Documents\ProgrammingTasksOOP\ProjectTemplate - Copy\obj\x86\Debug-Mac\MyGame.exe
 D:\Media\Wade\Documents\ProgrammingTasksOOP\ProjectTemplate - Copy\obj\x86\Debug-Mac\MyGame.pdb
+D:\Media\Wade\Documents\Development Tools P1\BattleShips\obj\x86\Debug-Mac\MyGame.exe
+D:\Media\Wade\Documents\Development Tools P1\BattleShips\obj\x86\Debug-Mac\MyGame.pdb
