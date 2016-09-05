@@ -6,7 +6,7 @@ namespace BattleShips
 	{
 		public static void Main()
 		{
-				GameState CurrentState = GameState.ViewingMainMenu;
+			GameState CurrentState = GameState.ViewingMainMenu;
 			//Opens a new Graphics Window
 			SwinGame.OpenGraphicsWindow("Battle Ships", 800, 600);
 
@@ -17,7 +17,9 @@ namespace BattleShips
 
 			//Game Loop
 			do {
+				GameController.HandleUserInput ();
 				GameController.DrawScreen();
+				//SwinGame.ProcessEvents();
 			} while (!(SwinGame.WindowCloseRequested() == true | CurrentState == GameState.Quitting));
 
 			SwinGame.StopMusic();
