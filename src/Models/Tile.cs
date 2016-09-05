@@ -120,7 +120,7 @@ public class Tile
 	/// </summary>
 	internal void Shoot()
 	{
-		if ((false == Shot)) {
+		if (false == Shot) {
 			Shot = true;
 			if (_Ship != null) {
 				_Ship.Hit();

@@ -155,7 +155,7 @@ namespace BattleShips
 
 		private static void ShowLoadingScreen()
 		{
-			_Background = SwinGame.LoadBitmap(SwinGame.PathToResource("SplashBack.png"));
+			_Background = SwinGame.LoadBitmap(SwinGame.PathToResource("SplashBack.png", ResourceKind.BitmapResource));
 			SwinGame.DrawBitmap(_Background, 0, 0);
 			SwinGame.RefreshScreen();
 			SwinGame.ProcessEvents();
