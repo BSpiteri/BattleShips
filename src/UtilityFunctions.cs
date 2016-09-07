@@ -131,7 +131,7 @@ namespace BattleShips
 
 					draw = true;
 
-					switch (grid.Item (row, col))
+					switch (grid[row, col])
 					{
 					//case TileView.Ship:
 						//draw = false;
@@ -150,7 +150,7 @@ namespace BattleShips
 							fillColor = LARGE_HIT;
 						break;
 					}
-					switch (grid.Item(row, col)) {
+					switch (grid[row, col]) {
 						case TileView.Sea:
 						case TileView.Ship:
 							if (small)
