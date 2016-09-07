@@ -126,7 +126,10 @@ namespace BattleShips
 
 			//For all of the scores
 			int i = 0;
-			foreach (Score s in _Scores) {
+			for (i = 0; i <= _Scores.Count - 1; i++) {
+				Score s = default (Score);
+				s = _Scores[i];
+				//for scores 1 - 9 use 01 - 09
 				if (i < 9) {
 					SwinGame.DrawText (" " + (i + 1) + ":   " + s.Name + "   " + s.Value, Color.White, GameResources.GameFont ("Courier"), SCORES_LEFT, SCORES_TOP + i * SCORE_GAP);
 				} else {
@@ -164,7 +167,7 @@ namespace BattleShips
 			}
 
 			//is it a high score
-			if (value > _Scores[_Scores.Count - 1].Value) {
+			if (value > _Scores [_Scores.Count - 1].Value) {
 				Score s = new Score();
 				s.Value = value;
 

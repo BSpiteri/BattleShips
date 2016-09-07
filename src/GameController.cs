@@ -23,7 +23,6 @@ namespace BattleShips
 		private static Stack<GameState> _state = new Stack<GameState>();
 
 		private static AIOption _aiSetting;
-		static string Message = "";
 
 		/// <summary>
 		/// Returns the current state of the game, indicating which screen is
@@ -157,9 +156,9 @@ namespace BattleShips
 			isHuman = object.ReferenceEquals(_theGame.Player, HumanPlayer);
 
 			if (isHuman) {
-				Message = "You " + result.ToString();
+				UtilityFunctions.Message = "You " + result.ToString();
 			} else {
-				Message = "The AI " + result.ToString();
+				UtilityFunctions.Message = "The AI " + result.ToString();
 			}
 
 			switch (result.Value) {
@@ -349,7 +348,7 @@ namespace BattleShips
 		public static void AddNewState(GameState state)
 		{
 			_state.Push(state);
-			Message = "";
+			UtilityFunctions.Message = "";
 		}
 
 		/// <summary>
