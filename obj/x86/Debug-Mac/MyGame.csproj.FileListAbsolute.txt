@@ -102,3 +102,9 @@ D:\Media\Wade\Documents\Development Tools P1\BattleShips\bin\Debug\Resources\Swi
 D:\Media\Wade\Documents\Development Tools P1\BattleShips\bin\Debug\MyGame.exe
 D:\Media\Wade\Documents\Development Tools P1\BattleShips\bin\Debug\MyGame.pdb
 D:\Media\Wade\Documents\Development Tools P1\BattleShips\bin\Debug\SwinGame.dll
+C:\Users\Brodie\Desktop\BattleShips\bin\Debug\mscorlib.dll
+C:\Users\Brodie\Desktop\BattleShips\bin\Debug\normidna.nlp
+C:\Users\Brodie\Desktop\BattleShips\bin\Debug\normnfc.nlp
+C:\Users\Brodie\Desktop\BattleShips\bin\Debug\normnfd.nlp
+C:\Users\Brodie\Desktop\BattleShips\bin\Debug\normnfkc.nlp
+C:\Users\Brodie\Desktop\BattleShips\bin\Debug\normnfkd.nlp
