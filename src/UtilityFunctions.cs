@@ -62,7 +62,6 @@ namespace BattleShips
 					result = true;
 				}
 			}
-
 			return result;
 		}
 
@@ -230,6 +229,7 @@ namespace BattleShips
 
 		public static void DrawBackground()
 		{
+				// what is the current state/screen, select appropriate background
 				switch (GameController.CurrentState) {
 				case GameState.ViewingMainMenu:
 				case GameState.ViewingGameMenu:
@@ -251,19 +251,20 @@ namespace BattleShips
 
 				SwinGame.DrawFramerate(675, 585, GameResources.GameFont("CourierSmall"));
 		}
-
+		// ship hit animation
 		public static void AddExplosion(int row, int col)
 		{
 			AddAnimation(row, col, "Splash");
 		}
-
+		// water hit animation 
 		public static void AddSplash(int row, int col)
 		{
 			AddAnimation(row, col, "Splash");
 		}
 
-
+		
 		private static List<Sprite> _Animations = new List<Sprite>();
+		// adds animated sprite in selected cell
 		private static void AddAnimation(int row, int col, string image)
 		{
 			Sprite s = default(Sprite);
@@ -282,7 +283,7 @@ namespace BattleShips
 			s.StartAnimation("splash");
 			_Animations.Add(s);
 		}
-
+		// updates spirites, adds new, removes old
 		public static void UpdateAnimations()
 		{
 			List<Sprite> ended = new List<Sprite>();
@@ -298,14 +299,14 @@ namespace BattleShips
 				SwinGame.FreeSprite(s);
 			}
 		}
-
+		// draw sprites 
 		public static void DrawAnimations()
 		{
 			foreach (Sprite s in _Animations) {
 				SwinGame.DrawSprite(s);
 			}
 		}
-
+		// animate spirates frames
 		public static void DrawAnimationSequence()
 		{
 			int i = 0;
