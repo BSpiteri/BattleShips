@@ -17,7 +17,7 @@ namespace BattleShips
 		private static Bitmap _LoaderFull;
 		private static Bitmap _LoaderEmpty;
 		private static Font _LoadingFont;
-
+		// loads font files and creates new font object
 		private static void LoadFonts()
 		{
 			NewFont("ArialLarge", "arial.ttf", 80);
@@ -25,7 +25,7 @@ namespace BattleShips
 			NewFont("CourierSmall", "cour.ttf", 8);
 			NewFont("Menu", "ffaccess.ttf", 8);
 		}
-
+		// loads and names image file objects
 		private static void LoadImages()
 		{
 			//Backgrounds
@@ -52,7 +52,7 @@ namespace BattleShips
 			NewImage("Splash", "splash.png");
 
 		}
-
+		// laods and names sound file objects
 		private static void LoadSounds()
 		{
 			NewSound("Error", "error.wav");
@@ -63,7 +63,7 @@ namespace BattleShips
 			NewSound("Winner", "winner.wav");
 			NewSound("Lose", "lose.wav");
 		}
-
+		// loads and names sound file objects
 		private static void LoadMusic()
 		{
 			NewMusic("Background", "horrordrone.mp3");
@@ -114,11 +114,11 @@ namespace BattleShips
 		}
 
 		private static SoundEffect _StartSound;
+		
 		/// <summary>
 		/// The Resources Class stores all of the Games Media Resources, such as Images, Fonts
-		/// Sounds, Music.
+		/// Sounds, Music and configures game window and loading screen sequence
 		/// </summary>
-
 		public static void LoadResources()
 		{
 			int width = 0;
@@ -126,7 +126,7 @@ namespace BattleShips
 
 			width = SwinGame.ScreenWidth();
 			height = SwinGame.ScreenHeight();
-
+			
 			SwinGame.ChangeScreenSize(800, 600);
 
 			ShowLoadingScreen();
@@ -153,6 +153,9 @@ namespace BattleShips
 			EndLoadingScreen(width, height);
 		}
 
+		/// <summary>
+		/// Displays loading screen background and animations
+		/// </summary>
 		private static void ShowLoadingScreen()
 		{
 			_Background = SwinGame.LoadBitmap(SwinGame.PathToResource("SplashBack.png", ResourceKind.BitmapResource));
@@ -169,7 +172,9 @@ namespace BattleShips
 
 			PlaySwinGameIntro();
 		}
-
+		/// <summary>
+		/// Loading bar  animator 
+		/// </summary>
 		private static void PlaySwinGameIntro()
 		{
 			const int ANI_X = 143;
@@ -195,6 +200,9 @@ namespace BattleShips
 
 		}
 
+		/// <summary>
+		/// Outputs text message
+		/// </summary>
 		private static void ShowMessage(string message, int number)
 		{
 			const int TX = 310;
@@ -216,7 +224,10 @@ namespace BattleShips
 			SwinGame.RefreshScreen();
 			SwinGame.ProcessEvents();
 		}
-
+		
+		/// <summary>
+		/// Ends loading screen
+		/// </summary>
 		private static void EndLoadingScreen(int width, int height)
 		{
 			SwinGame.ProcessEvents();
@@ -231,64 +242,67 @@ namespace BattleShips
 			Audio.FreeSoundEffect(_StartSound);
 			SwinGame.ChangeScreenSize(width, height);
 		}
-
+		// adds new fonts
+		// parameters: name, filename, size
 		private static void NewFont(string fontName, string filename, int size)
 		{
 			_Fonts.Add(fontName, SwinGame.LoadFont(SwinGame.PathToResource(filename, ResourceKind.FontResource), size));
 		}
-
+		// adds new image
 		private static void NewImage(string imageName, string filename)
 		{
 			_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(filename, ResourceKind.BitmapResource)));
 		}
-
-			private static void NewTransparentColorImage(string imageName, string fileName, Color transColor)
+		// adds new transparent image for americans
+		private static void NewTransparentColorImage(string imageName, string fileName, Color transColor)
 		{
 			_Images.Add(imageName, SwinGame.LoadBitmap(SwinGame.PathToResource(fileName, ResourceKind.BitmapResource), true, transColor));
 		}
-			private static void NewTransparentColourImage(string imageName, string fileName, Color transColor)
+		// pointless function which calls the function above
+		private static void NewTransparentColourImage(string imageName, string fileName, Color transColor)
 		{
 			NewTransparentColorImage(imageName, fileName, transColor);
 		}
-
+		// adds new sound file
 		private static void NewSound(string soundName, string filename)
 		{
 			_Sounds.Add(soundName, Audio.LoadSoundEffect(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 		}
-
+		// adds music files which are apparently not sound
 		private static void NewMusic(string musicName, string filename)
 		{
 			_Music.Add(musicName, Audio.LoadMusic(SwinGame.PathToResource(filename, ResourceKind.SoundResource)));
 		}
-
+		// some swingame thing about fonts
+		// is anyone else ever going to read this?
 		private static void FreeFonts()
 		{
 			foreach (Font obj in _Fonts.Values) {
 				SwinGame.FreeFont(obj);
 			}
 		}
-
+		// creates swingame image object
 		private static void FreeImages()
 		{
 			foreach (Bitmap obj in _Images.Values) {
 				SwinGame.FreeBitmap(obj);
 			}
 		}
-
+		// creates swingame sound object
 		private static void FreeSounds()
 		{
 			foreach (SoundEffect obj in _Sounds.Values) {
 				Audio.FreeSoundEffect(obj);
 			}
 		}
-
+		// creates swingame music object
 		private static void FreeMusic()
 		{
 			foreach (Music obj in _Music.Values) {
 				Audio.FreeMusic(obj);
 			}
 		}
-
+		// calls other functions to create game fonts, images, music, sound and processEents objects
 		public static void FreeResources()
 		{
 			FreeFonts();
