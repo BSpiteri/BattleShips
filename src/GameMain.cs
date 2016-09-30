@@ -6,7 +6,7 @@ namespace BattleShips
 	{
 		public static void Main()
 		{
-			GameState CurrentState = GameState.ViewingMainMenu;
+			//GameState CurrentState = GameState.ViewingMainMenu;
 			//Opens a new Graphics Window
 			SwinGame.OpenGraphicsWindow("Battle Ships", 800, 600);
 

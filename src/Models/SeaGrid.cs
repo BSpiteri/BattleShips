@@ -199,5 +199,22 @@ namespace BattleShips {
 				}
 			}
 		}
+
+		public int[] SaveLocation (ShipName Ship)
+		{
+			int [] xy = new int [2];
+			Ship newShip;
+			newShip = _Ships [Ship];
+			xy [0] = newShip.Row;
+			xy [1] = newShip.Column;
+			return xy;
+		}
+
+		public Direction SaveDirection (ShipName Ship)
+		{
+			Ship newShip;
+			newShip = _Ships [Ship];
+			return newShip.Direction;
+		}
 	}
 }

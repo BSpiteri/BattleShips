@@ -93,6 +93,10 @@ static class DeploymentController
 
 		mouse = SwinGame.MousePosition();
 
+		//Save Location for later
+		int[] xy = GameController.HumanPlayer.PlayerGrid.SaveLocation (_selectedShip);
+		Direction oldDirection = GameController.HumanPlayer.PlayerGrid.SaveDirection (_selectedShip);
+
 		//Calculate the row/col clicked
 		int row = 0;
 		int col = 0;
@@ -107,6 +111,7 @@ static class DeploymentController
 				} catch (Exception ex) {
 						Audio.PlaySoundEffect(GameResources.GameSound("Error"));
 						UtilityFunctions.Message = ex.Message;
+						GameController.HumanPlayer.PlayerGrid.MoveShip (xy[0], xy[1], _selectedShip, oldDirection);
 				}
 			}
 		}
