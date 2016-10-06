@@ -83,8 +83,9 @@ namespace BattleShips
 				case AIOption.Hard:
 					_ai = new AIHardPlayer(_theGame);
 					break;
+				case AIOption.Easy:
 				default:
-					_ai = new AIHardPlayer(_theGame);
+					_ai = new AIEasyPlayer(_theGame);
 					break;
 			}
 
@@ -377,6 +378,17 @@ namespace BattleShips
 		{
 			_aiSetting = setting;
 		}
+
+        //built for test
+        public static BattleShipsGame TheGame
+        {
+            get { return _theGame;  }
+        }
+
+        public static AIPlayer TheAi
+        {
+            get { return _ai; }
+        }
 
 	}
 }
