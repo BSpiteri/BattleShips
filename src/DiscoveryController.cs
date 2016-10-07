@@ -22,6 +22,12 @@ namespace BattleShips
 		/// </remarks>
 		public static void HandleDiscoveryInput()
 		{
+			if (SwinGame.MouseClicked (MouseButton.LeftButton)) {
+				if (UtilityFunctions.IsMouseInRectangle (693, 540, 80, 46)) {
+					GameController.AddNewState (GameState.ViewingGameMenu);
+				}
+			}
+
 			if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE))
 			{
 				GameController.AddNewState(GameState.ViewingGameMenu);
