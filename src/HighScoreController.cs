@@ -103,7 +103,8 @@ namespace BattleShips
 
 			output.WriteLine(_Scores.Count);
 
-			foreach (Score s in _Scores) {
+			foreach (Score s in _Scores) 
+			{
 				output.WriteLine(s.Name + s.Value);
 			}
 
@@ -119,14 +120,15 @@ namespace BattleShips
 			const int SCORES_TOP = 80;
 			const int SCORE_GAP = 30;
 
-			if (_Scores.Count == 0)
-				LoadScores();
+			if (_Scores.Count == 0) 
+			{
+				LoadScores ();
+			}
 
 			SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
 
 			//For all of the scores
-			int i = 0;
-			for (i = 0; i <= _Scores.Count - 1; i++) {
+			for (int i = 0; i <= _Scores.Count - 1; i++) {
 				Score s = default (Score);
 
 				s = _Scores[i];
@@ -146,9 +148,10 @@ namespace BattleShips
 		/// <remarks></remarks>
 		public static void HandleHighScoreInput()
 		{
-				if (SwinGame.MouseClicked(MouseButton.LeftButton) || SwinGame.KeyTyped(KeyCode.vk_ESCAPE) || SwinGame.KeyTyped(KeyCode.vk_RETURN)) {
+			if (SwinGame.MouseClicked(MouseButton.LeftButton) || SwinGame.KeyTyped(KeyCode.vk_ESCAPE) || SwinGame.KeyTyped(KeyCode.vk_RETURN))
+			{
 				GameController.EndCurrentState();
-				}
+			}
 		}
 
 		/// <summary>
@@ -198,6 +201,7 @@ namespace BattleShips
 				_Scores.RemoveAt(_Scores.Count - 1);
 				_Scores.Add(s);
 				_Scores.Sort();
+				SaveScores ();
 
 				GameController.EndCurrentState();
 			}
