@@ -126,7 +126,14 @@ namespace BattleShips
 			}
 
 			SwinGame.DrawText("   High Scores   ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, SCORES_HEADING);
-
+			
+			//Draws Credits
+			SwinGame.DrawText("Credits", Color.White, GameResources.GameFont("Courier"), 30, SCORES_HEADING);
+			SwinGame.DrawText("Jayden O'Brien - 100585413", Color.White, GameResources.GameFont("Courier"), 30, SCORES_HEADING+20);
+			SwinGame.DrawText("Brodie Spiteri - 100590161", Color.White, GameResources.GameFont("Courier"), 30, SCORES_HEADING+40);
+			SwinGame.DrawText("Ryan Day - 7746067", Color.White, GameResources.GameFont("Courier"), 30, SCORES_HEADING+60);
+			SwinGame.DrawText("Wade Russell - 100588373", Color.White, GameResources.GameFont("Courier"), 30, SCORES_HEADING+80);
+			
 			//For all of the scores
 			for (int i = 0; i <= _Scores.Count - 1; i++) {
 				Score s = default (Score);
