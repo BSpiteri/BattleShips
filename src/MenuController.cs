@@ -22,7 +22,7 @@ namespace BattleShips
 			new string[] {
 				"PLAY",
 				"SETUP",
-				"SCORES",
+				"SCORES & Credit",
 				"QUIT"
 			},
 			new string[] {
@@ -40,7 +40,7 @@ namespace BattleShips
 		private const int MENU_TOP = 575;
 		private const int MENU_LEFT = 30;
 		private const int MENU_GAP = 0;
-		private const int BUTTON_WIDTH = 75;
+		private const int BUTTON_WIDTH = 110;
 		private const int BUTTON_HEIGHT = 15;
 		private const int BUTTON_SEP = BUTTON_WIDTH + MENU_GAP;
 
